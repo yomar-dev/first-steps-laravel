@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 
 Route::get('/acerca', function () {
-    return 'Acerca de Nosotros';
+    return view('about');
 });
