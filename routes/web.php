@@ -21,6 +21,7 @@ Route::get('/', function () {
 	];
 
     return view('welcome', [
+    	"teacher" => "Yomar Developer",
     	"links" => $links
     ]);
 });
