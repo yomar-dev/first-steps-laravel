@@ -11,22 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-	$links = [
-		"https://yomar-dev.github.io/blog/" => "Blog",
-        "https://developer.mozilla.org/es/profiles/yomar-dev/" => "MDN",
-        "https://gitlab.com/yomar_dev" => "GitLab",
-        "https://twitter.com/yomar3092" => "Twitter",
-        "https://github.com/yomar-dev" => "GitHub"
-	];
-
-    return view('welcome', [
-    	"teacher" => "Yomar Developer",
-    	"links" => $links
-    ]);
-});
+Route::get('/', 'PagesController@home');
 
 
-Route::get('/acerca', function () {
-    return view('about');
-});
+Route::get('/acerca', 'PagesController@about');
