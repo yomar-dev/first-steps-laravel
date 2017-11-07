@@ -5,3 +5,7 @@
         Acerca de nosotros
     </div>
 @endsection
+
+@section('title')
+    Acerca
+@endsection
