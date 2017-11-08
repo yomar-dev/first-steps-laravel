@@ -7,5 +7,5 @@
 @endsection
 
 @section('title')
-    Acerca
+    Acerca de nosotros
 @endsection
