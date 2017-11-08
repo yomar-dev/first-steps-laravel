@@ -1,19 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="title m-b-md">
-        Aprendiendo Laravel
-    </div>
+    <div class="jumbotron text-center">
+        <h1>Laratter</h1>
 
-    @if (isset($teacher))
-        <p>{{ $teacher }}</p>
-    @else
-        <p>Developer On Fire</p>
-    @endif
-
-    <div class="links">
-        @foreach ($links as $link => $text)
-            <a href="{{ $link }}">{{ $text }}</a>
-        @endforeach
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link" href="/" title="Home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/acerca" title="Acerca de nosotros">Acerca</a></li>
+            </ul>
+        </nav>
     </div>
 @endsection
