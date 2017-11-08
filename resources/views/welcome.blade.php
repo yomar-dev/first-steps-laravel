@@ -12,7 +12,7 @@
     </div>
 
     <div class="row">
-        @foreach ($messages as $message)
+        @forelse ($messages as $message)
             <div class="col-6">
                 <img class="img-thumbnail" src="{{ $message['image'] }}" alt="">
                 <p class="card-text">
@@ -20,6 +20,8 @@
                     <a href="/messages/{{ $message['id'] }}">Leer más</a>
                 </p>
             </div>
-        @endforeach
+        @empty
+            <p>No hay mensajes</p>
+        @endforelse
     </div>
 @endsection
