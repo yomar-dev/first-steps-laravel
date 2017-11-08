@@ -7,17 +7,31 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home(){
-    	$links = [
-			"https://yomar-dev.github.io/blog/" => "Blog",
-	        "https://developer.mozilla.org/es/profiles/yomar-dev/" => "MDN",
-	        "https://gitlab.com/yomar_dev" => "GitLab",
-	        "https://twitter.com/yomar3092" => "Twitter",
-	        "https://github.com/yomar-dev" => "GitHub"
+    	$messages = [
+			[
+				'id' => 1,
+				'content' => 'Este es mi primer mensaje',
+				'image' => 'http://lorempixel.com/600/338?1'
+			],
+			[
+				'id' => 2,
+				'content' => 'Este es mi segundo mensaje',
+				'image' => 'http://lorempixel.com/600/338?2'
+			],
+			[
+				'id' => 3,
+				'content' => 'Este es mi tercer mensaje',
+				'image' => 'http://lorempixel.com/600/338?3'
+			],
+			[
+				'id' => 4,
+				'content' => 'Este es mi cuarto mensaje',
+				'image' => 'http://lorempixel.com/600/338?4'
+			]
 		];
 
 	    return view('welcome', [
-	    	"teacher" => "Yomar Developer",
-	    	"links" => $links
+	    	'messages' => $messages
 	    ]);
     }
 
