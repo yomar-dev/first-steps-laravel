@@ -34,8 +34,4 @@ class PagesController extends Controller
 	    	'messages' => $messages
 	    ]);
     }
-
-    public function about(){
-    	return view('about');
-    }
 }
