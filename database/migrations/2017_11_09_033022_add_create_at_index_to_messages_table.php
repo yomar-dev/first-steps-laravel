@@ -26,7 +26,7 @@ class AddCreateAtIndexToMessagesTable extends Migration
     public function down()
     {
         Schema::table('messages', function (Blueprint $table) {
-            //
+            $table->dropIndex('messages_created_at_index');
         });
     }
 }
