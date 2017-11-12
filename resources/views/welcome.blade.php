@@ -12,9 +12,11 @@
     </div>
 
     <div class="row">
-        <form action="/message/create" method="post">
+        <form action="/messages/create" method="post">
             <div class="form-group">
+                {{ csrf_field() }}
                 <input type="text" name="message" class="form-control" placeholder="Que estás pensando?">
+        
             </div>
         </form>
     </div>
