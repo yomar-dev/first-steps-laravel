@@ -12,6 +12,6 @@ class MessagesController extends Controller
 
     	return view('messages.show', [
     		'message' => $message
-    	])
+    	]);
     }
 }
