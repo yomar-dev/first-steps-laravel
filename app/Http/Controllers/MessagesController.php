@@ -17,7 +17,7 @@ class MessagesController extends Controller
 
     public function create(Request $request){
     	$this->validate($request, [
-    		'message' => 'required'
+    		'message' => ['required', 'max:160']
     	]);
     }
 }
