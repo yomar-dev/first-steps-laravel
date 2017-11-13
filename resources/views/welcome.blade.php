@@ -39,7 +39,7 @@
         @endforelse
 
         @if (count($messages))
-            {{ $messages->links() }}
+            {{ $messages->links('pagination::bootstrap-4') }}
         @endif
     </div>
 @endsection
