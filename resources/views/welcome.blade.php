@@ -37,5 +37,9 @@
         @empty
             <p>No hay mensajes</p>
         @endforelse
+
+        @if (count($messages))
+            {{ $messages->links('pagination::bootstrap-4') }}
+        @endif
     </div>
 @endsection
