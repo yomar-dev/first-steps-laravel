@@ -26,7 +26,7 @@ $factory->define(App\User::class, function (Faker $faker) {
 
 $factory->define(App\Message::class, function (Faker $faker){
 	return [
-		'content' => $faker->realText(),
+		'content' => $faker->realText(random_int(20, 160)),
 		'image' => $faker->imageUrl(600, 338)
 	];
 });
