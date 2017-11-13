@@ -15,10 +15,10 @@
         <form action="/messages/create" method="post">
             <div class="form-group">
                 {{ csrf_field() }}
-                <input type="text" name="message" class="form-control" placeholder="Que estás pensando?">
+                <input type="text" name="message" class="form-control @if($errors->has('message')) is-invalid @endif" placeholder="Que estás pensando?">
                 @if ($errors->has('message'))
                     @foreach ($errors->get('message') as $error)
-                        <div>{{ $error }}</div>
+                        <div class="invalid-feedback">{{ $error }}</div>
                     @endforeach
                 @endif
             </div>
