@@ -16,7 +16,7 @@
             <div class="form-group">
                 {{ csrf_field() }}
                 <input type="text" name="message" class="form-control" placeholder="Que estás pensando?">
-                @if ($errors->any())
+                @if ($errors->has('message'))
                     @foreach ($errors->get('message') as $error)
                         <div>{{ $error }}</div>
                     @endforeach
